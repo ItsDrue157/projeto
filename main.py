@@ -1,10 +1,11 @@
 #GERADOR DE SENHA
-import string 
+import string as s
 import random as r
+import time
 from itertools import chain
 NUMERO_DE_REPETICOES = 12
 tamanho_senha = 0
-letras_minusculas = string.ascii_lowercase
+letras_minusculas = s.ascii_lowercase
 numeros = "0123456789"
 simbolos = "!@#$%^&*()-_+={}[]|;':<>,.?/"
 def gerar_senha(tamanho_senha):
@@ -13,7 +14,9 @@ def gerar_senha(tamanho_senha):
     senha = "".join(map(str, r.sample(todas_letras, tamanho_senha)))
     print(senha)
 print("Sua senha é: ")
+
 gerar_senha(12)  # Chamando a função com o tamanho da senha desejado
+time.sleep(12)
     
         
         
